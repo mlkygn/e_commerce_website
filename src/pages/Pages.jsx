@@ -1,12 +1,14 @@
 import React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Home from "../components/mainpage/Home";
+import FlashDeals from "../components/Flash/FlashDeals";
 
-function Pages() {
+function Pages({productItems}) {
   return (
-    <Routes>
-      <Route path="/" exact element={<Home />} />
-    </Routes>
+    <>
+      <Home />
+      <FlashDeals productItems={productItems} />
+    </>
   );
 }
 
